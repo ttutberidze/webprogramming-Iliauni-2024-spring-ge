@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.sidebar, .main {
+  border: 1px solid lightgreen
+}
+.sidebar {
+  flex: 1;
+}
+.main {
+  flex: 4
+}
+.wrapper {
+  display: flex;
+}
+.sidebar a.active, .sidebar a.chemi-activi {
+  background-color: aquamarine;
+}
