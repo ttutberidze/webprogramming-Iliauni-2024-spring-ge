@@ -4,7 +4,9 @@ import User from './User'
 
 function App() {
 
+  // const [users, setUsers] = useState([{name: 'Irakli'}, {name: 'Lasha'}]);
   const [users, setUsers] = useState([{name: 'Irakli'}, {name: 'Lasha'}]);
+  console.log(users)
   // const [isOpen, setIsOpen] = useState(true);
   // const inputRef = useRef()
   // const customRef = useRef(10)
@@ -31,7 +33,8 @@ function App() {
   }, [])
 
   const onInputChange = useCallback((value, index) => {
-    setUsers(([...newUsers]) => {
+    setUsers((prevUsers) => {
+      const newUsers = [...prevUsers]
       const user = {...newUsers[index]};
       user.name = value
       newUsers[index] = user;
@@ -40,7 +43,7 @@ function App() {
   }, [])
 
   const addUser = () => {
-    setUsers([...users, {name: ''}])
+    setUsers((prevUsers) => [...prevUsers, {name: ''}])
   }
 
   const deleteUser = useCallback((indexToRemove) => {
@@ -76,6 +79,7 @@ function App() {
 
       {/* <button onClick={toggle}>Toggle</button> */}
       {/* <button onClick={show}>Show</button> */}
+      {/* [{name: 'Irakli'}, {name: 'Lasha'}] */}
       {users.map((user, index) => {
         return <User 
                   key={index}

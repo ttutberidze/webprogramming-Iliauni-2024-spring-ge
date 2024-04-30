@@ -7,7 +7,7 @@ const User = ({name, onInputChange, onDelete, clearUser, index}) => {
     //         console.log(`${name} is unmounted`)
     //     }
     // })
-    console.log(name)
+
     return (
         <div>
             <p>
