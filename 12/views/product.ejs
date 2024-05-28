@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Product List</title>
+    </head>
+    <body>
+        <%- include('partials/header', {username}) %>
+        <h4><%= title %></h4>
+        <ul>
+            <% users.forEach((user) => { %>
+                <li><%= user.name %></li>
+            <% }) %>
+        </ul>
+    </body>
+</html>
