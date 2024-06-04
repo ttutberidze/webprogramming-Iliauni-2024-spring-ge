@@ -23,7 +23,7 @@ const createTask = async (userId, taskObject) => {
     return user;
 }
 
-const main = async() => {
+const main = async () => {
     await mongoose.connect('mongodb+srv://iliauni:iliauni@cluster0.8dd2xz5.mongodb.net/task-management?retryWrites=true&w=majority&appName=Cluster0')
 
     const user = await createUser()
